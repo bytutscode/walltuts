@@ -1,0 +1,951 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+/* font-family: 'Rubik Wet Paint', cursive; */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image:linear-gradient(rgb(48, 0, 58) , rgb(2, 7, 71));
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+}
+.mode { 
+    display: flex;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.404);
+    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+    right: 20px;
+    top: 20px;
+    max-width: 150px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: none;
+}
+/* MODES STATUS */
+.mode #dark:checked ~ label {
+    background-image: none;
+    background-color: #00ff15;
+}
+.mode label{
+    display:flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content:start;
+    align-items:;
+}
+.mode .circle {
+    width: 20px;
+    border: 3px solid #00ff15;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 7px;
+    
+    
+}
+h1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px black;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+h1 span {
+    border-bottom:2px solid #00ff15;
+}
+.download { 
+    
+}
+.buttons .downloads a  {
+    display: none;
+}
+
+.download img {
+    width:50px;
+}
+section.container-1 {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    justify-items:center;
+    row-gap: 50px;
+    padding-top: 70px;
+}
+.title {
+    color: white;
+    font-size: 25px;
+    width: 250px ;
+    position: absolute;
+    line-height: 25px;
+    text-shadow: 0px 0px 10px rgb(82, 255, 2);
+    text-align: center;
+    z-index: -1;
+    margin-top: -50px;
+    }
+    .buttons {
+    position: absolute;
+    display: flex;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 510px;
+    border: 1px solid #00ff15;
+    border-radius: 30px;
+    padding: 5px 10px;
+}
+.container {
+    width: 250px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    display: grid;
+    margin-bottom: 70px;
+    
+}
+header {
+    display: flex;
+    height: 100PX;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px ;
+}
+header .logo {
+    color: rgb(0, 0, 0);
+    padding-right: 50px;
+    font-size: 50PX;
+    -webkit-text-stroke: 1PX  #00ff15;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Rubik Wet Paint', cursive;
+}
+
+header .menu nav ul {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    display: flex;
+}
+
+.menu-mobile {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+.menu-mobile .menu-line {
+    width: 100%;
+    height: 4px;
+    background-color: #00ff15;
+}
+header .menu nav ul a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 30px;
+}
+header .menu nav ul a:hover{
+    background-color: #00ff15;
+    color: black;
+}
+header .menu nav ul li {
+    
+}
+
+
+.container .wall1 .wall1-slide-area {
+    width: 500%;
+    display: flex;
+}
+.container .wall1 .wall1-slide-area .slideimg {
+    width:20%;
+    transition: .5s;
+    
+}
+.slideimg img {
+    width: 105%;
+    height: 498px;
+}
+.slide1.slideimg img {
+    width: 100%;
+    margin-top: -30px;
+    height: auto;
+}
+.slide2 {
+    margin-bottom: -50PX;
+}
+.container .wall1 .wall1-slide-area .slide1 {
+    
+}
+.container .wall1 .wall1-slide-area .slide1 img {
+   
+}
+
+
+input {
+    display: none;
+}
+
+.buttons label {
+    margin-right: 7px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid #00ff15;
+    cursor: pointer;
+}
+
+
+#slidepb1:checked ~ .slide1 {
+    margin-left: 0%;
+}
+#slidepb2:checked ~ .slide1 {
+    margin-left: -20%;
+}
+#slidepb3:checked ~ .slide1 {
+    margin-left: -40%;
+}
+#slidepb4:checked ~ .slide1 {
+    margin-left: -60%;
+}
+
+#slidepb1:checked ~ .buttons .buttonpb1 {
+    background-color: white;
+}
+#slidepb2:checked ~ .buttons .buttonpb2 {
+    background-color: white;
+}
+#slidepb3:checked ~ .buttons .buttonpb3 {
+    background-color: white;
+}
+#slidepb4:checked ~ .buttons .buttonpb4 {
+    background-color: white;
+}
+
+/* downloads peaky */
+#slidepb1:checked ~ .buttons .downloads a:nth-child(1) {
+    display: block;   
+ }
+ #slidepb2:checked ~ .buttons .downloads a:nth-child(2) {
+    display: block;   
+ }
+ #slidepb3:checked ~ .buttons .downloads a:nth-child(3) {
+    display: block;   
+ }
+ #slidepb4:checked ~ .buttons .downloads a:nth-child(4) {
+    display: block; 
+ }
+
+
+
+
+
+
+
+
+/*THE WALKING DEAD*/
+.wall1-slide-areatwd {
+    width: 500%;
+    display: flex;
+}
+.slideimgtwd {
+    width: 20%;
+    transition: .5s;
+}
+
+.slide1twd {
+    
+    width: 320px;
+}
+.slide5twd {
+    margin-top: -20px;
+}
+.slideimgtwd img {
+    width: 100%;
+}
+#slidetwd1:checked ~ .slide1twd {
+    margin-left: 0%;
+}
+
+#slidetwd2:checked ~ .slide1twd {
+    margin-left: -20%;
+}
+#slidetwd3:checked ~ .slide1twd {
+    margin-left: -40%;
+}
+#slidetwd4:checked ~ .slide1twd {
+    margin-left: -60%;
+}
+#slidetwd5:checked ~ .slide1twd {
+    margin-left: -80%;
+}
+#slidetwd1:checked ~ .buttons .buttontwd1 {
+    background-color: white;
+}
+#slidetwd2:checked ~ .buttons .buttontwd2 {
+    background-color: white;
+}
+#slidetwd3:checked ~ .buttons .buttontwd3 {
+    background-color: white;
+}
+#slidetwd4:checked ~ .buttons .buttontwd4 {
+    background-color: white;
+}
+#slidetwd5:checked ~ .buttons .buttontwd5 {
+    background-color: white;
+}
+
+/* downloads twd */
+#slidetwd1:checked ~ .buttons .downloads a:nth-child(1) {
+    display: block;   
+ }
+ #slidetwd2:checked ~ .buttons .downloads a:nth-child(2) {
+    display: block;   
+ }
+ #slidetwd3:checked ~ .buttons .downloads a:nth-child(3) {
+    display: block;   
+ }
+ #slidetwd4:checked ~ .buttons .downloads a:nth-child(4) {
+    display: block; 
+ }
+ #slidetwd5:checked ~ .buttons .downloads a:nth-child(5) {
+    display: block; 
+ }
+
+
+
+/* Vikings */
+.wall1-slide-areavik {
+    width: 500%;
+    display: flex;
+}
+.slideimgvik {
+    width: 20%;
+    transition: .5s;
+}
+
+.slide1vik {
+    
+}
+.slideimgvik img {
+    width: 100%;
+}
+.slide1vik.slideimgvik img {
+    width: auto;
+    margin-left: -150px;
+}
+.slide2vik.slideimgvik img {
+   
+    margin-left: -100px;
+}
+.slide3vik.slideimgvik img {
+    width: 130%;
+    margin-left: -100px;
+    
+}
+.slideimgvik img {
+    width: 100%;
+}
+#slidevik1:checked ~ .slide1vik {
+    margin-left: 0%;
+}
+
+#slidevik2:checked ~ .slide1vik {
+    margin-left: -20%;
+}
+#slidevik3:checked ~ .slide1vik {
+    margin-left: -40%;
+}
+#slidevik4:checked ~ .slide1vik {
+    margin-left: -60%;
+}
+#slidevik5:checked ~ .slide1vik {
+    margin-left: -80%;
+}
+#slidevik1:checked ~ .buttons .buttonvik1 {
+    background-color: white;
+}
+#slidevik2:checked ~ .buttons .buttonvik2 {
+    background-color: white;
+}
+#slidevik3:checked ~ .buttons .buttonvik3 {
+    background-color: white;
+}
+#slidevik4:checked ~ .buttons .buttonvik4 {
+    background-color: white;
+}
+#slidevik5:checked ~ .buttons .buttonvik5 {
+    background-color: white;
+}
+/* vikings download */
+#slidevik1:checked ~ .buttons .downloads a:nth-child(1) {
+    display: block;   
+ }
+ #slidevik2:checked ~ .buttons .downloads a:nth-child(2) {
+    display: block;   
+ }
+ #slidevik3:checked ~ .buttons .downloads a:nth-child(3) {
+    display: block;   
+ }
+ #slidevik4:checked ~ .buttons .downloads a:nth-child(4) {
+    display: block; 
+ }
+ #slidevik5:checked ~ .buttons .downloads a:nth-child(5) {
+    display: block; 
+ }
+
+
+/* BREAKING BAD */
+
+
+.wall1-slide-areabb {
+    width: 500%;
+    display: flex;
+}
+.slideimgbb {
+    width: 20%;
+    transition: .5s;
+}
+
+.slide1bb {
+    
+}
+.slide1bb.slideimgbb img {
+   
+}
+.slide2bb.slideimgbb img {
+   
+   
+}
+.slide3bb.slideimgbb img {
+  
+    
+}
+.slideimgbb img {
+    width: 114%;
+}
+.slide5bb.slideimgbb img {
+  
+    width: 135%;
+}
+#slidebb1:checked ~ .slide1bb {
+    margin-left: 0%;
+}
+
+#slidebb2:checked ~ .slide1bb {
+    margin-left: -20%;
+}
+#slidebb3:checked ~ .slide1bb {
+    margin-left: -40%;
+}
+#slidebb4:checked ~ .slide1bb {
+    margin-left: -60%;
+}
+#slidebb5:checked ~ .slide1bb {
+    margin-left: -80%;
+}
+#slidebb1:checked ~ .buttons .buttonbb1 {
+    background-color: white;
+}
+#slidebb2:checked ~ .buttons .buttonbb2 {
+    background-color: white;
+}
+#slidebb3:checked ~ .buttons .buttonbb3 {
+    background-color: white;
+}
+#slidebb4:checked ~ .buttons .buttonbb4 {
+    background-color: white;
+}
+#slidebb5:checked ~ .buttons .buttonbb5 {
+    background-color: white;
+}
+
+/* breaking bad download */
+#slidebb1:checked ~ .buttons .downloads a:nth-child(1) {
+    display: block;   
+ }
+ #slidebb2:checked ~ .buttons .downloads a:nth-child(2) {
+    display: block;   
+ }
+ #slidebb3:checked ~ .buttons .downloads a:nth-child(3) {
+    display: block;   
+ }
+ #slidebb4:checked ~ .buttons .downloads a:nth-child(4) {
+    display: block; 
+ }
+ #slidebb5:checked ~ .buttons .downloads a:nth-child(5) {
+    display: block; 
+ }
+
+
+
+/* DRAGON BALL */
+
+.wall1-slide-areadragon {
+    width: 500%;
+    display: flex;
+}
+.slideimgdragon {
+    width: 20%;
+    transition: .5s;
+}
+
+.slide1dragon {
+    
+}
+.slide1dragon.slideimgdragon img {
+   
+}
+.slide2dragon.slideimgdragon img {
+   
+   
+}
+.slide3dragon.slideimgdragon img {
+  
+    
+}
+.slideimgdragon img {
+    width: 114%;
+}
+.slide5dragon.slideimgdragon img {
+  width: 119%;
+    
+}
+#slidedragon1:checked ~ .slide1dragon {
+    margin-left: 0%;
+}
+
+#slidedragon2:checked ~ .slide1dragon {
+    margin-left: -20%;
+}
+#slidedragon3:checked ~ .slide1dragon {
+    margin-left: -40%;
+}
+#slidedragon4:checked ~ .slide1dragon {
+    margin-left: -60%;
+}
+#slidedragon5:checked ~ .slide1dragon {
+    margin-left: -80%;
+}
+#slidedragon1:checked ~ .buttons .buttondragon1 {
+    background-color: white;
+}
+#slidedragon2:checked ~ .buttons .buttondragon2 {
+    background-color: white;
+}
+#slidedragon3:checked ~ .buttons .buttondragon3 {
+    background-color: white;
+}
+#slidedragon4:checked ~ .buttons .buttondragon4 {
+    background-color: white;
+}
+#slidedragon5:checked ~ .buttons .buttondragon5 {
+    background-color: white;
+}
+
+/* DRAGON BALL DOWNLOADS */
+#slidedragon1:checked ~ .buttons .downloads a:nth-child(1) {
+    display: block;   
+ }
+ #slidedragon2:checked ~ .buttons .downloads a:nth-child(2) {
+    display: block;   
+ }
+ #slidedragon3:checked ~ .buttons .downloads a:nth-child(3) {
+    display: block;   
+ }
+ #slidedragon4:checked ~ .buttons .downloads a:nth-child(4) {
+    display: block; 
+ }
+ #slidedragon5:checked ~ .buttons .downloads a:nth-child(5) {
+    display: block; 
+ }
+
+/* NARUTO */
+
+    
+.wall1-slide-areanaruto {
+    width: 500%;
+    display: flex;
+}
+.slideimgnaruto {
+    width: 20%;
+    transition: .5s;
+}
+
+.slide1naruto {
+    
+}
+.slide1naruto.slideimgnaruto img {
+   
+}
+.slide2naruto.slideimgnaruto img {
+   
+   
+}
+.slide3naruto.slideimgnaruto img {
+  
+    
+}
+.slideimgnaruto img {
+    width: 100%;
+}
+.slide1naruto.slideimgnaruto img {
+    width: 106%;
+}
+.slide2naruto.slideimgnaruto img {
+    width: 112%;
+}
+.slide3naruto.slideimgnaruto img {
+    width: 127%;
+}
+.slide4naruto.slideimgnaruto img {
+    width: 132%;
+}
+.slide5naruto.slideimgnaruto img {
+ width: 117%;
+}
+#slidenaruto1:checked ~ .slide1naruto {
+    margin-left: 0%;
+}
+
+#slidenaruto2:checked ~ .slide1naruto {
+    margin-left: -20%;
+}
+#slidenaruto3:checked ~ .slide1naruto {
+    margin-left: -40%;
+}
+#slidenaruto4:checked ~ .slide1naruto {
+    margin-left: -60%;
+}
+#slidenaruto5:checked ~ .slide1naruto {
+    margin-left: -80%;
+}
+#slidenaruto1:checked ~ .buttons .buttonnaruto1 {
+    background-color: white;
+}
+#slidenaruto2:checked ~ .buttons .buttonnaruto2 {
+    background-color: white;
+}
+#slidenaruto3:checked ~ .buttons .buttonnaruto3 {
+    background-color: white;
+}
+#slidenaruto4:checked ~ .buttons .buttonnaruto4 {
+    background-color: white;
+}
+#slidenaruto5:checked ~ .buttons .buttonnaruto5 {
+    background-color: white;
+}
+
+/* NARUTO DOWNLOAD */
+#slidenaruto1:checked ~ .buttons .downloads a:nth-child(1) {
+    display: block;   
+ }
+ #slidenaruto2:checked ~ .buttons .downloads a:nth-child(2) {
+    display: block;   
+ }
+ #slidenaruto3:checked ~ .buttons .downloads a:nth-child(3) {
+    display: block;   
+ }
+ #slidenaruto4:checked ~ .buttons .downloads a:nth-child(4) {
+    display: block; 
+ }
+ #slidenaruto5:checked ~ .buttons .downloads a:nth-child(5) {
+    display: block; 
+ }
+
+
+/* DEATH NOTE */
+
+.wall1-slide-areadeath {
+    width: 500%;
+    display: flex;
+}
+.slideimgdeath {
+    width: 20%;
+    transition: .5s;
+}
+
+.slide1death {
+    
+}
+.slide1death.slideimgdeath img {
+   
+}
+.slide2death.slideimgdeath img {
+   
+   
+}
+.slide3death.slideimgdeath img {
+  
+    
+}
+.slideimgdeath img {
+    height: auto;
+    width: 100%;
+}
+.slide1death.slideimgdeath img {
+    width:132%;
+}
+.slide2death.slideimgdeath img {
+    width:113%;}
+.slide3death.slideimgdeath img {
+    width:113%;
+}
+.slide4death.slideimgdeath img {
+    width:113%;
+}
+.slide5death.slideimgdeath img {
+ width:200%;
+}
+#slidedeath1:checked ~ .slide1death {
+    margin-left: 0%;
+}
+
+#slidedeath2:checked ~ .slide1death {
+    margin-left: -20%;
+}
+#slidedeath3:checked ~ .slide1death {
+    margin-left: -40%;
+}
+#slidedeath4:checked ~ .slide1death {
+    margin-left: -60%;
+}
+#slidedeath5:checked ~ .slide1death {
+    margin-left: -80%;
+}
+#slidedeath1:checked ~ .buttons .buttondeath1 {
+    background-color: white;
+}
+#slidedeath2:checked ~ .buttons .buttondeath2 {
+    background-color: white;
+}
+#slidedeath3:checked ~ .buttons .buttondeath3 {
+    background-color: white;
+}
+#slidedeath4:checked ~ .buttons .buttondeath4 {
+    background-color: white;
+}
+#slidedeath5:checked ~ .buttons .buttondeath5 {
+    background-color: white;
+}
+
+/* DEATH NOTE DOWNLOAD */
+#slidedeath1:checked ~ .buttons .downloads a:nth-child(1) {
+    display: block;   
+ }
+ #slidedeath2:checked ~ .buttons .downloads a:nth-child(2) {
+    display: block;   
+ }
+ #slidedeath3:checked ~ .buttons .downloads a:nth-child(3) {
+    display: block;   
+ }
+ #slidedeath4:checked ~ .buttons .downloads a:nth-child(4) {
+    display: block; 
+ }
+ #slidedeath5:checked ~ .buttons .downloads a:nth-child(5) {
+    display: block; 
+ }
+
+
+
+
+
+/* EVERYBODY HATES CHRIS */
+
+.wall1-slide-areachris {
+    width: 500%;
+    display: flex;
+}
+.slideimgchris {
+    width: 20%;
+    transition: .5s;
+}
+
+.slide1chris {
+    
+}
+.slide1chris.slideimgchris img {
+   
+}
+.slide2chris.slideimgchris img {
+   
+   
+}
+.slide3chris.slideimgchris img {
+  
+    
+}
+.slideimgchris img {
+    height: auto;
+    width: 100%;
+}
+.slide1chris.slideimgchris img {
+   width: 154%;
+}
+.slide2chris.slideimgchris img {
+    width: 152%;
+}
+.slide3chris.slideimgchris img {
+    width: 114%;
+}
+.slide4chris.slideimgchris img {
+   width: 134%;
+}
+.slide5chris.slideimgchris img {
+ width: 134%;
+}
+#slidechris1:checked ~ .slide1chris {
+    margin-left: 0%;
+}
+
+#slidechris2:checked ~ .slide1chris {
+    margin-left: -20%;
+}
+#slidechris3:checked ~ .slide1chris {
+    margin-left: -40%;
+}
+#slidechris4:checked ~ .slide1chris {
+    margin-left: -60%;
+}
+#slidechris5:checked ~ .slide1chris {
+    margin-left: -80%;
+}
+#slidechris1:checked ~ .buttons .buttonchris1 {
+    background-color: white;
+}
+#slidechris2:checked ~ .buttons .buttonchris2 {
+    background-color: white;
+}
+#slidechris3:checked ~ .buttons .buttonchris3 {
+    background-color: white;
+}
+#slidechris4:checked ~ .buttons .buttonchris4 {
+    background-color: white;
+}
+#slidechris5:checked ~ .buttons .buttonchris5 {
+    background-color: white;
+}
+
+/* CHRIS DOWNLOAD */
+#slidechris1:checked ~ .buttons .downloads a:nth-child(1) {
+    display: block;   
+ }
+ #slidechris2:checked ~ .buttons .downloads a:nth-child(2) {
+    display: block;   
+ }
+ #slidechris3:checked ~ .buttons .downloads a:nth-child(3) {
+    display: block;   
+ }
+ #slidechris4:checked ~ .buttons .downloads a:nth-child(4) {
+    display: block; 
+ }
+ #slidechris5:checked ~ .buttons .downloads a:nth-child(5) {
+    display: block; 
+ }
+
+
+
+
+
+
+
+
+
+
+
+ /* RESPONSIVIDADE MAX1050PX */
+
+ @media (max-width:1050px) {
+    section.container-1 {
+        grid-template-columns: repeat(3 , 1fr);
+    }
+    header {
+        padding: 20px 50px;
+    }
+ }
+
+ /* 768PX */
+
+ @media (min-width:668px) and (max-width:768px) {
+    section.container-1 {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    .logo {
+        margin-right: 50px;
+    }
+    header {
+        padding: 20px 50px;
+    }
+    header .menu nav ul{
+        display: block;
+    }
+ }
+
+ /* 665px */
+ @media (min-width:526px) and (max-width:695px) {
+    section.container-1 {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    .logo {
+        margin-right: 50px;
+    }
+    header {
+        padding: 20px 50px;
+    }
+    header .menu nav ul{
+        display: block;
+    }
+    .menu-mobile {
+        display: flex;
+    }
+    header .menu {
+        display: none ;
+        width: 60vw;
+        text-align: center;
+        padding: 100px 20px;
+        right: 0;
+        top: 0;
+        background-color: #0000009f;
+    }
+    header .menu nav ul a {
+        display: block;
+        padding: 0;
+        padding: 10px 5px;
+    }
+ }
+
+ @media (min-width:100px) and (max-width:525px) {
+    section.container-1 {
+        grid-template-columns: 1fr;
+    }
+    header .menu nav ul{
+        display: block;
+    }
+    .menu-mobile {
+        display: flex;
+    }
+    header .menu {
+        display: none ;
+        width: 60vw;
+        text-align: center;
+        padding: 100px 20px;
+        right: 0;
+        top: 0;
+        background-color: #0000009f;
+    }
+    header .menu nav ul a {
+        display: block;
+        padding: 0;
+        padding: 10px 5px;
+    }
+ }
