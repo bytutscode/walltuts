@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body {
-    background-image:linear-gradient(rgb(48, 0, 58) , rgb(2, 7, 71));
+    background-color:#000000f0;
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 100px;
