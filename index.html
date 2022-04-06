@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Walltuts</title>
+    <script type="text/javascript">
+        window.onload = function () {
+         document.querySelector(".menu-mobile").addEventListener("click", function(){
+             if(document.querySelector(".menu").style.display == 'flex') {
+                 document.querySelector(".menu").style.display = 'none';
+             } else {
+                 document.querySelector(".menu").style.display = 'flex';
+             }
+         });
+        };
+        </script>
 </head>
 <body id="body">
     <div class="mode">Modo:
@@ -26,7 +37,7 @@
         <div class="menu">
             <nav>
                 <ul>        
-            <a href="#populares"><li>Populares</li></a>
+            <a href=""><li>Populares</li></a>
             <a href="#emalta"><li>Em alta</li></a>
             <a href=""><li>Animes</li></a>
             <a href=""><li>Seriados</li></a>
@@ -36,7 +47,7 @@
         </nav>
         </div>
     </header>
-    <h1 id="populares"><span>POPULARES</span></h1>
+    <div><h1 id="populares"><span>POPULARES</span></h1></div>
     <section class="container-1">
         
     <div class="container">
